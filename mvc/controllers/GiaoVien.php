@@ -8,7 +8,7 @@ class GiaoVien extends Controller
         $this->view("master_1",[
             "page"=>"giaovien",
             "func_page"=>[
-                "addgv"
+                "addgv","updategv"
                 ],
             "giaovien"=>$data
         ]);

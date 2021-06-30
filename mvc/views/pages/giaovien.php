@@ -1,4 +1,9 @@
+<?php 
 
+echo $data['giaovien'];  
+
+
+?>
 <div class="content">
 
 <!-- sang tabel-xóa ở đay -->
