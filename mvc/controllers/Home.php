@@ -1,7 +1,13 @@
 <?php 
 class Home extends Controller{
     public function Default(){
-       $this->view("master_1");
+        $home = $this->model("HomeModel");
+        $data = $home->display();
+        
+        $this->view("master_1",[
+            "page"=>"home",
+            "home"=>$data
+        ]);
     }
 }
 ?>
