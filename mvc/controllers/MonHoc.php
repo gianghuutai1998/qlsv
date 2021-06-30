@@ -6,7 +6,7 @@ class MonHoc extends Controller{
 
         $this->view("master_1", [
             "page"=>"monhoc",
-            "func_page"=>"addmonhoc",
+            "func_page"=>["addmonhoc"],
             "monhoc"=>$data        
         ]);
     }

@@ -216,3 +216,4 @@
 [Wed Jun 30 13:46:43.237902 2021] [php:warn] [pid 10140:tid 1852] [client 127.0.0.1:61519] PHP Warning:  foreach() argument must be of type array|object, string given in C:\\xampp\\htdocs\\qlsv\\mvc\\views\\master_1.php on line 32
 [Wed Jun 30 13:48:29.757676 2021] [php:warn] [pid 10140:tid 1852] [client 127.0.0.1:64129] PHP Warning:  foreach() argument must be of type array|object, string given in C:\\xampp\\htdocs\\qlsv\\mvc\\views\\master_1.php on line 32
 [Wed Jun 30 13:48:44.481535 2021] [php:warn] [pid 10140:tid 1848] [client 127.0.0.1:54104] PHP Warning:  foreach() argument must be of type array|object, string given in C:\\xampp\\htdocs\\qlsv\\mvc\\views\\master_1.php on line 32
+[Wed Jun 30 14:06:02.080190 2021] [php:warn] [pid 10140:tid 1848] [client 127.0.0.1:58289] PHP Warning:  foreach() argument must be of type array|object, string given in C:\\xampp\\htdocs\\qlsv\\mvc\\views\\master_1.php on line 32
