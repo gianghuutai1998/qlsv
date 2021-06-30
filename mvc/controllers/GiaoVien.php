@@ -7,6 +7,9 @@ class GiaoVien extends Controller
 
         $this->view("master_1",[
             "page"=>"giaovien",
+            "func_page"=>[
+                "addgv"
+                ],
             "giaovien"=>$data
         ]);
       
@@ -20,6 +23,9 @@ class GiaoVien extends Controller
             "giaovien"=>$data
         ]);
       
+    }
+    public function add(){
+        print_r($_POST);
     }
 }
 ?>

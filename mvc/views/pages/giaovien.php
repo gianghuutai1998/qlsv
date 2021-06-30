@@ -1,6 +1,3 @@
-<?php 
-// print_r($data["giaovien"]);
-?>
 <div class="content">
 
 <!-- sang tabel-xóa ở đay -->
@@ -66,8 +63,7 @@
                      data-whatever="@mdo"><?php echo $value["TenGV"]?></a>
                  </td>
                  <td>
-                 <?php echo $gt;
-                    ?>
+                    <?php echo $gt;?>  
                  </td>
                  <td>
                  <?php echo $value["QueQuan"]?>
