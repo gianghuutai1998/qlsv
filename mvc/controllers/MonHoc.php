@@ -40,5 +40,7 @@ class MonHoc extends Controller{
         $monhoc->DeleteMH($mamh);
         header('location: /MonHoc');
     }
+        ]);
+    }
 }
 ?>

@@ -6,7 +6,6 @@ class MonHocModel extends MySQLDB{
         if(! $getData->execute()) return;
         return $getData->fetchAll();
     }
-
     public function addMonHoc($arr=[]){
         $getData = $this->conn->prepare("insert into monhoc(MaMH, TenMH, SoTinChi) value (?, ?, ?)");
         $getData->execute($arr);

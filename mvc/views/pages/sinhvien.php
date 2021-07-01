@@ -1,10 +1,4 @@
-<?php
-// print_r($data["giaovien"]);
-?>
 <div class="content">
-
-  <!-- sang tabel-xóa ở đay -->
-
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
@@ -84,5 +78,4 @@
       </div>
     </div>
   </div>
-  <!-- xóa ở trên tới đay -->
 </div>
