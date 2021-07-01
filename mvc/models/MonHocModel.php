@@ -21,5 +21,12 @@ class MonHocModel extends MySQLDB{
         $getData = $this->conn->prepare("delete from monhoc where MaMH=?");
         $getData->execute((array)$mamh);
     }
+
+    public function MHExists($mamh){
+        $getData = $this->conn->prepare("select * from monhoc where MaMH=?");
+        $getData->execute((array)$mamh);
+        if($getData->rowCount() > 0) return true;
+        return false;
+    }
 }
 ?>

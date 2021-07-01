@@ -18,8 +18,13 @@ class MonHoc extends Controller{
             foreach($_POST as $value){
                 array_push($mh_data, $value);
             }
-            $monhoc->addMonhoc($mh_data);
-            header('location: /MonHoc');
+            if(! $monhoc->MHExists($mh_data[0])){
+                $monhoc->addMonhoc($mh_data);
+                header('location: /MonHoc');
+            } else {
+                echo "<script>alert('Mã môn học đã tồn tại! Vui lòn nhập lại mã môn học khác.'); window.history.back();</script>";
+            }
+            
         }
     }
     public function Update($maMH = null, $tenmh = null, $sotc = null){

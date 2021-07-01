@@ -19,8 +19,13 @@ class Lop extends Controller{
             foreach($_POST as $value){
                 array_push($lop_data, $value);
             }
-            $lop->AddLop($lop_data);
-            header('location: /Lop');
+
+            if(! $lop->LopExists($lop_data[0])){
+                $lop->AddLop($lop_data);
+                header('location: /Lop');
+            } else {
+                echo "<script>alert('Mã lớp đã tồn tại! Vui lòn nhập lại mã lớp khác.'); window.history.back();</script>";
+            }
         }
     }
 

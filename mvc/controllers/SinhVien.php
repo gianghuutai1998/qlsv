@@ -3,11 +3,14 @@ class SinhVien extends Controller{
 
     public function Default(){
         $sinhvien = $this->model("SinhVienModel");
+        $lop = $this->model("LopModel");
         $data = $sinhvien->display();
+        
 
         $this->view("master_1", [
             "page"=>"sinhvien",
             "sinhvien"=>$data,
+            "lop"=>$lop->GetLops(),
             "func_page"=>["addsinhvien"]
         ]);
     }
@@ -23,7 +26,6 @@ class SinhVien extends Controller{
                 $sinhvien->AddSV($sv_data);
             header('location: /SinhVien');
             } else {
-                
                 echo "<script>alert('Sinh viên đã tồn tại! Vui lòn nhập lại mã sinh viên khác.'); window.history.back();</script>";
             }
         }

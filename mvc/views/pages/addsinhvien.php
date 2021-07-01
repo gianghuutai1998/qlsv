@@ -33,9 +33,19 @@
                 </label>
               </div>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label for="Quequan">Mã lớp</label>
               <input type="text" class="form-control" id="MaLop" name="MaLop">
+            </div> -->
+            <div class="form-group">
+                <label>Lớp</label>
+                <select class="form-control" name="MaLop">
+                    <?php 
+                        foreach ($data['lop'] as $lop) {?> 
+                       <option value="<?php echo $lop["MaLop"]?>"><?php echo $lop["TenLop"]?></option>;
+                   <?php } ?>
+                    
+                </select>
             </div>
             <div class="form-group">
               <label for="Quequan">Quê quán</label>

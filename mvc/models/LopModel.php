@@ -22,5 +22,12 @@ class LopModel extends MySQLDB{
         $getData = $this->conn->prepare("delete from lop where MaLop=?");
         $getData->execute((array)$malop);
     }
+
+    public function LopExists($malop){
+        $getData = $this->conn->prepare("select * from lop where MaLop=?");
+        $getData->execute((array)$malop);
+        if($getData->rowCount() > 0) return true;
+        return false;
+    }
 }
 ?>
