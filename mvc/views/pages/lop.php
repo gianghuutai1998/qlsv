@@ -7,7 +7,7 @@
             <!-- bnt add-->
             <div class="btn-toolbar justify-content-between">
               <div>
-                <h4 class="card-title ">Simple Table</h4>
+                <h4 class="card-title ">Danh sách các lớp</h4>
                 <p class="card-category"> Here is a subtitle for this table</p>
               </div>
               <div>
@@ -15,61 +15,44 @@
                 <a href="javascript:;" class="btn btn-primary btn-round " data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo">Thêm mới</a>
               </div>
             </div>
-
             <!-- end bnt add -->
           </div>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table">
                 <thead class=" text-primary">
-                  <th>
-                    Mã sinh viên
-                  </th>
-                  <th>
-                    Tên sinh viên
-                  </th>
-                  <th>
-                    Giới tính
-                  </th>
-                  <th>
-                    Tên lớp
-                  </th>
-                  <th>
-                    Quê quán
-                  </th>
+                  <th>Mã Lớp</th>
+                  <th>Tên Tên lớp</th>
+                  <th>Mã Khoa</th>
+                  <th>Mã GVCN</th>
                   <th>
                     <p class="thEnd">chọn</p>
                   </th>
                 </thead>
                 <tbody>
                   <?php
-                  ?>
-                  <?php
-                  foreach ($data["sinhvien"] as $value) {
+                  foreach ($data["lop"] as $value) {
                   ?>
                     <tr>
                       <td>
-                        <?php echo $value["MaSV"] ?>
+                        <?php echo $value["MaLop"] ?>
                       </td>
                       <td>
-                        <a href="SinhVien/Update/<?php echo sprintf("%s/%s/%s/%s/%s", $value["MaSV"], $value["TenSV"], $value['GioiTinh'], $value['MaLop'], $value['QueQuan']) ?> ">
-                          <?php echo $value["TenSV"] ?>
-                        </a>
+                        <a href="/Lop/Update/<?php
+                                              echo sprintf("%s/%s/%s/%s", $value["MaLop"],  $value["TenLop"], $value['MaGVCN'], $value['MaKhoa']);
+                                              ?>"><?php echo $value["TenLop"] ?></a>
                       </td>
                       <td>
-                        <?php echo ($value["GioiTinh"] ? "Nam" : "Nữ")  ?>
+                        <?php echo $value['MaKhoa']; ?>
                       </td>
                       <td>
-                        <?php echo $value['TenLop']; ?>
-                      </td>
-                      <td>
-                        <?php echo $value["QueQuan"] ?>
+                        <?php echo $value['MaGVCN']; ?>
                       </td>
                       <td class="text-primary">
-                        <a onclick="return confirm('Xác nhận xoá <?php echo $value['TenSV'] ?>? ')" href="/SinhVien/Delete/<?php echo $value['MaSV']; ?>" class="btn btn-primary btn-round">Xóa</a>
+                        <a onclick="return confirm('Xác nhận xoá <?php echo $value['TenLop'] ?>? ')" href="/Lop/Delete/<?php echo $value['MaLop']; ?>" class="btn btn-primary btn-round">Xóa</a>
                       </td>
                     </tr>
-                  <?php  } ?>
+                  <?php } ?>
                 </tbody>
               </table>
             </div>

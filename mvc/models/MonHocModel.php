@@ -6,15 +6,19 @@ class MonHocModel extends MySQLDB{
         if(! $getData->execute()) return;
         return $getData->fetchAll();
     }
-
-    public function addMonHoc($mamh, $tenmh, $sotc){
-        $getData = $this->conn->prepare("insert into monhoc(MaMH, TenMH, SoTinChi) value ('?', '?', '?')");
-        $getData->execute($mamh, $tenmh, $sotc);
+    public function addMonHoc($arr=[]){
+        $getData = $this->conn->prepare("insert into monhoc(MaMH, TenMH, SoTinChi) value (?, ?, ?)");
+        $getData->execute($arr);
     }
 
-    public function updateMonHoc($mamh, $tenmh, $sotc){
-        $getData = $this->conn->prepare("update monhoc set TenMH='?', SoTinChi='?' where MaMH='?'");
-        $getData->execute($tenmh, $sotc, $mamh);
+    public function updateMonHoc($arr){
+        $getData = $this->conn->prepare("update monhoc set TenMH=?, SoTinChi=? where MaMH=?");
+        $getData->execute($arr);
+    }
+
+    public function DeleteMH($mamh){
+        $getData = $this->conn->prepare("delete from monhoc where MaMH=?");
+        $getData->execute((array)$mamh);
     }
 }
 ?>
