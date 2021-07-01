@@ -9,10 +9,14 @@ class GiaoVienModel extends MySQLDB
     public function getGiaoVienWithMaGV($MaGV){
         $getData = $this->conn->prepare("select * from GIAOVIEN where MaGV = ?");
         if(!$getData->execute([$MaGV])) return;
-        return $getData->fetch();
+        return json_encode($getData->fetch());
     }
-    public function updateGiaoVien($MaGV, $data = []){
-        $getData = $this->conn->prepare("update GIAOVIEN set ");
+    public function updateGiaoVien($id, $name, $home){
+        $getData = $this->conn->prepare("update GIAOVIEN set TenGV=?, QueQuan=? where MaGV=?");
+        $data = [$name, $home, $id];
+        $stmt = $getData->execute($data );
+        $num = $getData->rowCount();
+        return json_encode($getData->rowCount());
     }
     
 }

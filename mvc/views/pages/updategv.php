@@ -9,14 +9,14 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="#" method="POST">
+          <form action="" method="POST" id="updateGVForm">
             <div class="form-group">
               <label for="MaGV">Mã giáo viên</label>
-              <input type="text" class="form-control" id="MaGV">
+              <input type="text" class="form-control" id="updateMaGV">
             </div>
             <div class="form-group">
               <label for="TenGV">Tên giáo viên</label>
-              <input type="text" class="form-control" id="TenGV">
+              <input type="text" class="form-control" id="updateTenGV">
             </div>
             <div class="form-group">
               <label>Giới tính</label>
@@ -28,13 +28,13 @@
               </style>
              
               <div class="form-check-new">
-                <input class="form-check-input" type="radio" name="GioiTinh" id="Nam">
+                <input class="form-check-input" type="radio" name="GioiTinh" id="updateNam">
                 <label class="form-check-label" for="Nam">
                   Nam
                 </label>
               </div>
               <div class="form-check-new">
-                <input class="form-check-input" type="radio" name="GioiTinh" id="Nu">
+                <input class="form-check-input" type="radio" name="GioiTinh" id="updateNu">
                 <label class="form-check-label" for="Nu">
                   Nữ
                 </label>
@@ -44,14 +44,15 @@
             </div>
             <div class="form-group">
               <label for="Quequan">Quê quán</label>
-              <input type="text" class="form-control" id="Quequan">
+              <input type="text" class="form-control" id="updateQuequan">
             </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+              <button type="button" class="btn btn-primary" id="updateGVBtn">Lưu thay đổi</button>
+          </div>
           </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-          <button type="button" class="btn btn-primary">Lưu thay đổi</button>
-        </div>
+        
       </div>
     </div>
   </div>

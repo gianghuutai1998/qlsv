@@ -10,6 +10,9 @@ class GiaoVien extends Controller
             "func_page"=>[
                 "addgv","updategv"
                 ],
+            "func_page_js"=>[
+                "updateGV"
+            ],
             "giaovien"=>$data
         ]);
       
@@ -18,14 +21,18 @@ class GiaoVien extends Controller
         $giaovien = $this->model("GiaoVienModel");
         $data = $giaovien->getGiaoVienWithMaGV($MaGV);
 
-        $this->view("master_1",[
-            "page"=>"giaovien",
-            "giaovien"=>$data
-        ]);
+        echo $data;
       
     }
     public function add(){
         print_r($_POST);
+    }
+    public function Update($id, $name, $home){
+        $giaovien = $this->model("GiaoVienModel");
+        $kq = $giaovien->updateGiaoVien($id, $name, $home);
+        $new = $giaovien->getGiaoVienWithMaGV($id);
+        echo $new;
+        
     }
 }
 ?>
