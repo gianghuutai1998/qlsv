@@ -1,3 +1,8 @@
+<?php 
+
+$data_show = json_decode($data["giaovien"], true);
+// print_r($data_show);
+?>
 <div class="content">
 
 <!-- sang tabel-xóa ở đay -->
@@ -48,24 +53,24 @@
               
               ?>
               <?php 
-              foreach($data["giaovien"] as $value){
+              foreach($data_show as $value){
                 $gt = "Nu";
                 if($value["GioiTinh"])
                 $gt = "Nam";
              ?>
 
                 <tr>
-                 <td>
+                 <td class="<?php echo $value["MaGV"]?>" data-id="MaGV"> 
                    <?php echo $value["MaGV"]?>
                  </td>
                  <td>
-                   <a href="#" class="" data-toggle="modal" data-target="#exampleModal2"
-                     data-whatever="@mdo"><?php echo $value["TenGV"]?></a>
+                   <a href="#" id="<?php echo $value["MaGV"]?>" class="MaGV <?php echo $value["MaGV"]?>" data-toggle="modal" data-target="#exampleModal2"
+                     data-whatever="@mdo" data-id="TenGV"><?php echo $value["TenGV"]?></a>
                  </td>
-                 <td>
+                 <td class="<?php echo $value["MaGV"]?>" data-id="GioiTinh">
                     <?php echo $gt;?>  
                  </td>
-                 <td>
+                 <td class="<?php echo $value["MaGV"]?>" data-id="QueQuan">
                  <?php echo $value["QueQuan"]?>
                  </td>
                  <td class="text-primary">
@@ -86,3 +91,6 @@
 <!-- xóa ở trên tới đay -->
 
 </div>
+
+
+<script src="./mvc/public/assets/js/funcpages_js/updateGV.js"></script>
