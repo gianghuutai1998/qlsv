@@ -21,7 +21,6 @@ class MonHoc extends Controller{
             $monhoc->addMonhoc($mh_data);
             header('location: /MonHoc');
         }
-        
     }
     public function Update($maMH = null, $tenmh = null, $sotc = null){
         if(isset($_POST['submit'])){

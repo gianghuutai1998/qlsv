@@ -1,10 +1,4 @@
-<?php
-// print_r($data["giaovien"]);
-?>
 <div class="content">
-
-  <!-- sang tabel-xóa ở đay -->
-
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
@@ -13,7 +7,7 @@
             <!-- bnt add-->
             <div class="btn-toolbar justify-content-between">
               <div>
-                <h4 class="card-title ">Simple Table</h4>
+                <h4 class="card-title ">Danh sách các lớp</h4>
                 <p class="card-category"> Here is a subtitle for this table</p>
               </div>
               <div>
@@ -29,19 +23,16 @@
               <table class="table">
                 <thead class=" text-primary">
                   <th>
-                    Mã sinh viên
+                    Mã Lớp
                   </th>
                   <th>
-                    Tên sinh viên
+                    Tên Tên lớp
                   </th>
                   <th>
-                    Giới tính
+                    Mã Khoa
                   </th>
                   <th>
-                    Tên lớp
-                  </th>
-                  <th>
-                    Quê quán
+                    Mã Giáo viên CN
                   </th>
                   <th>
                     <p class="thEnd">chọn</p>
@@ -49,33 +40,29 @@
                 </thead>
                 <tbody>
                   <?php
-                  ?>
-                  <?php
-                  foreach ($data["sinhvien"] as $value) {
+                  foreach ($data["lop"] as $value) {
                   ?>
                     <tr>
                       <td>
-                        <?php echo $value["MaSV"] ?>
+                        <?php echo $value["MaLop"] ?>
                       </td>
                       <td>
-                        <a href="SinhVien/Update/<?php echo sprintf("%s/%s/%s/%s/%s", $value["MaSV"], $value["TenSV"], $value['GioiTinh'], $value['MaLop'], $value['QueQuan']) ?> ">
-                          <?php echo $value["TenSV"] ?>
-                        </a>
+                        <a href="/Lop/Update/<?php
+                                                echo sprintf("%s/%s/%s/%s", $value["MaLop"],  $value["TenLop"], $value['MaGVCN'], $value['MaKhoa']);
+                                                ?>"><?php echo $value["TenLop"] ?></a>
                       </td>
                       <td>
-                        <?php echo ($value["GioiTinh"] ? "Nam" : "Nữ")  ?>
+                        <?php echo $value['MaKhoa']; ?>
                       </td>
                       <td>
-                        <?php echo $value['TenLop']; ?>
-                      </td>
-                      <td>
-                        <?php echo $value["QueQuan"] ?>
+                        <?php echo $value['MaGVCN']; ?>
                       </td>
                       <td class="text-primary">
-                        <a onclick="return confirm('Xác nhận xoá <?php echo $value['TenSV'] ?>? ')" href="/SinhVien/Delete/<?php echo $value['MaSV']; ?>" class="btn btn-primary btn-round">Xóa</a>
+                        <a onclick="return confirm('Xác nhận xoá <?php echo $value['TenLop'] ?>? ')" href="/Lop/Delete/<?php echo $value['MaLop']; ?>" class="btn btn-primary btn-round">Xóa</a>
                       </td>
                     </tr>
-                  <?php  } ?>
+
+                  <?php } ?>
                 </tbody>
               </table>
             </div>
@@ -84,5 +71,4 @@
       </div>
     </div>
   </div>
-  <!-- xóa ở trên tới đay -->
 </div>
