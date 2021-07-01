@@ -10,31 +10,31 @@
             <div class="sidebar-wrapper">
               <ul class="nav">
                 <li class="nav-item ">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="/SinhVien">
                     <i class="material-icons">person</i>
                     <p>Sinh Vien</p>
                   </a>
                 </li>
                 <li class="nav-item active ">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="/GiaoVien">
                     <i class="material-icons">content_paste</i>
                     <p>Giao Vien</p>
                   </a>
                 </li>
                 <li class="nav-item ">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="/Lop">
                     <i class="material-icons">library_books</i>
                     <p>Lop</p>
                   </a>
                 </li>
                 <li class="nav-item ">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="/Khoa">
                     <i class="material-icons">bubble_chart</i>
                     <p>Khoa</p>
                   </a>
                 </li>
                 <li class="nav-item ">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="/Diem">
                     <i class="material-icons">location_ons</i>
                     <p>Diem</p>
                   </a>
