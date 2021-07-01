@@ -36,6 +36,7 @@
     ?>
     <?php 
     include "mvc/core/JS.php";
+    
     ?>
         
 
