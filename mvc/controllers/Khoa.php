@@ -5,12 +5,9 @@ class Khoa extends Controller{
         $khoadata = json_decode($khoa->getKhoa(), true);
         $giaovien = $this->model("GiaoVienModel");
         $gvdata = json_decode($giaovien->getGiaoVien(), true);
-        
-        $this->view("master_1",[
-            "page"=>"khoa",
-            
-            
-        ]);
+        $tmp_gvdata = [];
+       
+       
       
     }
 }
