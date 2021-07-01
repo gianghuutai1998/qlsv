@@ -41,6 +41,6 @@ class Lop extends Controller{
         $lop = $this->model("LopModel");
         $lop->DeleteLop($malop);
         header('location: /Lop');
-    }    
+    }   
 }
 ?>

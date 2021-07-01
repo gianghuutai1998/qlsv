@@ -18,9 +18,14 @@ class SinhVien extends Controller{
             $sinhvien = $this->model("SinhVienModel");
             foreach($_POST as $value){
                 array_push($sv_data, $value);
-            }
-            $sinhvien->AddSV($sv_data);
+            } 
+            if(! $sinhvien->SVExist($sv_data[0])){
+                $sinhvien->AddSV($sv_data);
             header('location: /SinhVien');
+            } else {
+                
+                echo "<script>alert('Sinh viên đã tồn tại! Vui lòn nhập lại mã sinh viên khác.'); window.history.back();</script>";
+            }
         }
     }
 
@@ -31,8 +36,10 @@ class SinhVien extends Controller{
             header('location: /Sinhvien');
         }
 
+        $lop = $this->model("LopModel");
         $this->view("master_1", [
             "page"=>"updatesinhvien",
+            "lop"=>$lop->GetLops(),
             "sinhvien"=>[$masv, $tensv, $gioitinh, $malop, $quequan]       
         ]);
     }

@@ -65,16 +65,19 @@ INSERT INTO GIAOVIEN(MaGV, TenGV, GioiTinh, QueQuan) VALUE
     ('GV002', 'Nguyễn Văn Đông', 1, 'Đà Nẵng'),
     ('GV003', 'Hồ Phú Quang', 1, 'HCM'),
     ('GV004', 'Trần Nguyễn Bảo Thi', 0, 'Quảng Trị'),
-    ('GV005', 'Lê Đăng Long', 1, 'Quảng Bình');
+    ('GV005', 'Sở Thiên Thư', 1, 'Huế'),
+    ('GV006', 'Trương Nhược Trần', 1, 'Càn Khôn Giới'),
+    ('GV007', 'Lê Đăng Long', 1, 'Quảng Bình');
 
 INSERT INTO KHOA(MaKhoa, TenKhoa, MaCNKhoa) VALUE 
     ('KCNTT', 'Khoa Công nghệ Thông tin', 'GV005'),
-    ('KTOAN', 'Khoa Toán', 'GV001');
+    ('KTOAN', 'Khoa Toán', 'GV001'),
+    ('KNVAN', 'Khoa Ngữ Văn', 'GV002');
 
 INSERT INTO LOP(MaLop, TenLop, MaKhoa, MaGVCN) VALUE
-    ('L001', 'A', 'KTOAN', 'GV002'),
-    ('L002', 'B', 'KCNTT', 'GV004'),
-    ('L003', 'C', 'KCNTT', 'GV005');
+    ('L001', 'Toán 40A', 'KTOAN', 'GV002'),
+    ('L002', 'Tin 40A', 'KCNTT', 'GV004'),
+    ('L003', 'Tin 40B', 'KCNTT', 'GV005');
 
 INSERT INTO SINHVIEN(MaSV, TenSV, GioiTinh, MaLop, QueQuan) VALUE
     ('001', 'Phạm Thanh Tú', 0, 'L001', 'Quảng Bình'),
@@ -94,17 +97,24 @@ INSERT INTO SINHVIEN(MaSV, TenSV, GioiTinh, MaLop, QueQuan) VALUE
 
 INSERT INTO DIEMTHI(MaMH, MaSV, LanThi, DiemThi) VALUE
     ('TOA001', '001', 1, 8),
+    ('TOA002', '001', 2, 5),
     ('TOA002', '002', 1, 6),
+    ('TOA001', '002', 1, 7),
     ('TOA001', '003', 1, 7),
+    ('TIN001', '003', 1, 7),
     ('TOA002', '004', 1, 9),
     ('TOA002', '005', 1, 10),
     ('TIN001', '006', 1, 5),
     ('TIN001', '007', 1, 7),
+    ('TIN002', '007', 1, 7),
     ('TIN002', '008', 1, 8),
     ('TIN001', '009', 1, 8),
     ('TIN001', '010', 1, 9),
+    ('TIN002', '010', 1, 9),
+    ('TOA001', '010', 1, 10),
     ('TIN001', '011', 1, 8),
     ('TIN002', '012', 1, 9),
+    ('TIN001', '012', 1, 9),
     ('TIN001', '013', 1, 8),
     ('TIN001', '014', 1, 10),
     ('TIN002', '014', 1, 8);

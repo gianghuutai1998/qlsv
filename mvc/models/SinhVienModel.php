@@ -20,5 +20,12 @@ class SinhVienModel extends MySQLDB{
         $getData = $this->conn->prepare("delete from sinhvien where MaSV=?");
         $getData->execute((array)$masv);
     }
+
+    public function SVExist($masv){
+        $getData = $this->conn->prepare("select * from sinhvien where MaSV=?");
+        $getData->execute((array)$masv);
+        if($getData->rowCount() > 0) return true; 
+        return false;
+    }
 }
 ?>
