@@ -40,7 +40,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                <button type="button" class="btn btn-primary" id="addGVBtn">Lưu thông tin</button>
+                <button type="button" class="btn btn-primary" id="addGVBtn"  data-dismiss="modal">Lưu thông tin</button>
             </div>
           </form>
         </div>
