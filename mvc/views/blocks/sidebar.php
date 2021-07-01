@@ -33,10 +33,16 @@
                     <p>Khoa</p>
                   </a>
                 </li>
-                <li class="nav-item " id="Diem-item">
-                  <a class="nav-link" href="/Diem">
+                <li class="nav-item " id="DiemThi-item">
+                  <a class="nav-link" href="/DiemThi">
                     <i class="material-icons">location_ons</i>
                     <p>Diem</p>
+                  </a>
+                </li>
+                <li class="nav-item " id="MonHoc-item">
+                  <a class="nav-link" href="/MonHoc">
+                    <i class="material-icons">location_ons</i>
+                    <p>Mon Hoc</p>
                   </a>
                 </li>
                 <li class="nav-item ">

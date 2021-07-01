@@ -21,6 +21,7 @@
             <div class="form-group">
               <label for="SoTinChi">Số Tín Chỉ</label>
               <input type="text" class="form-control" id="SoTinChi" name="SoTinChi">
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>

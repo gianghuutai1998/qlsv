@@ -1,3 +1,4 @@
+
 <?php 
 
 $data_show = json_decode($data["giaovien"], true);
