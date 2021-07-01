@@ -18,6 +18,19 @@ class GiaoVienModel extends MySQLDB
         $num = $getData->rowCount();
         return json_encode($getData->rowCount());
     }
-    
+    public function delGiaoVien($id){
+        $getData = $this->conn->prepare("delete from GIAOVIEN  where MaGV=?");
+        
+        $stmt = $getData->execute([$id]);
+        // $num = $getData->rowCount();
+        return json_encode($getData->rowCount());
+    }
+    public function addGiaoVien($id, $name, $gen, $home){
+        $getData = $this->conn->prepare("INSERT INTO GIAOVIEN(MaGV, TenGV, GioiTinh, QueQuan) VALUE (?,?,?,?)");
+        $data = [$id, $name, $gen, $home];
+        $stmt = $getData->execute($data );
+        
+        return json_encode( $stmt);
+    }
 }
 ?>
