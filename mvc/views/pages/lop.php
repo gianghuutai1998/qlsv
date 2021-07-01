@@ -15,25 +15,16 @@
                 <a href="javascript:;" class="btn btn-primary btn-round " data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo">Thêm mới</a>
               </div>
             </div>
-
             <!-- end bnt add -->
           </div>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table">
                 <thead class=" text-primary">
-                  <th>
-                    Mã Lớp
-                  </th>
-                  <th>
-                    Tên Tên lớp
-                  </th>
-                  <th>
-                    Mã Khoa
-                  </th>
-                  <th>
-                    Mã Giáo viên CN
-                  </th>
+                  <th>Mã Lớp</th>
+                  <th>Tên Tên lớp</th>
+                  <th>Mã Khoa</th>
+                  <th>Mã GVCN</th>
                   <th>
                     <p class="thEnd">chọn</p>
                   </th>
@@ -48,8 +39,8 @@
                       </td>
                       <td>
                         <a href="/Lop/Update/<?php
-                                                echo sprintf("%s/%s/%s/%s", $value["MaLop"],  $value["TenLop"], $value['MaGVCN'], $value['MaKhoa']);
-                                                ?>"><?php echo $value["TenLop"] ?></a>
+                                              echo sprintf("%s/%s/%s/%s", $value["MaLop"],  $value["TenLop"], $value['MaGVCN'], $value['MaKhoa']);
+                                              ?>"><?php echo $value["TenLop"] ?></a>
                       </td>
                       <td>
                         <?php echo $value['MaKhoa']; ?>
@@ -61,7 +52,6 @@
                         <a onclick="return confirm('Xác nhận xoá <?php echo $value['TenLop'] ?>? ')" href="/Lop/Delete/<?php echo $value['MaLop']; ?>" class="btn btn-primary btn-round">Xóa</a>
                       </td>
                     </tr>
-
                   <?php } ?>
                 </tbody>
               </table>

@@ -7,7 +7,7 @@
             <!-- bnt add-->
             <div class="btn-toolbar justify-content-between">
               <div>
-                <h4 class="card-title ">Simple Table</h4>
+                <h4 class="card-title ">Danh sách môn học</h4>
                 <p class="card-category"> Here is a subtitle for this table</p>
               </div>
               <div>
@@ -22,15 +22,9 @@
             <div class="table-responsive">
               <table class="table">
                 <thead class=" text-primary">
-                  <th>
-                    Mã môn học
-                  </th>
-                  <th>
-                    Tên môn học
-                  </th>
-                  <th>
-                    Số tín chỉ
-                  </th>
+                  <th>Mã môn học</th>
+                  <th>Tên môn học</th>
+                  <th>Số tín chỉ</th>
                   <th>
                     <p class="thEnd">chọn</p>
                   </th>
@@ -55,7 +49,6 @@
                         <a onclick="return confirm('Xác nhận xoá <?php echo $value['TenMH'] ?>? ')" href="/MonHoc/Delete/<?php echo $value['MaMH']; ?>" class="btn btn-primary btn-round">Xóa</a>
                       </td>
                     </tr>
-
                   <?php } ?>
                 </tbody>
               </table>
