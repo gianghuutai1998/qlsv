@@ -39,6 +39,12 @@
                     <p>Diem</p>
                   </a>
                 </li>
+                <li class="nav-item " id="MonHoc-item">
+                  <a class="nav-link" href="/MonHoc">
+                    <i class="material-icons">location_ons</i>
+                    <p>Mon Hoc</p>
+                  </a>
+                </li>
                 <li class="nav-item ">
                   <a class="nav-link" href="#">
                     <i class="material-icons">notifications</i>
