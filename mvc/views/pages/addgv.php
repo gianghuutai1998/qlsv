@@ -9,9 +9,9 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="/GiaoVien/add" method="POST">
+          <form action="" method="POST">
             <div class="form-group">
-              <label for="MaGV">Mã giáo viên</label>
+              <label for="addMaGV">Mã giáo viên</label>
               <input type="text" class="form-control" id="addMaGV" name="MaGV">
             </div>
             <div class="form-group">
@@ -20,15 +20,15 @@
             </div>
             <div class="form-group">
               <label>Giới tính</label>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="GioiTinh" id="addNam" value="Nam">
-                <label class="form-check-label" for="Nam">
+              <div class="form-check2">
+                <input class="form-check-input2" type="radio" name="addGioiTinh" id="addNam" value="Nam" >
+                <label class="form-check-label" for="addNam">
                   Nam
                 </label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="GioiTinh" id="addNu" checked value="Nu">
-                <label class="form-check-label" for="Nu">
+              <div class="form-check2">
+                <input class="form-check-input2" type="radio" name="addGioiTinh" id="addNu" checked value="Nu">
+                <label class="form-check-label" for="addNu">
                   Nữ
                 </label>
               </div>
@@ -40,7 +40,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                <button type="submit" class="btn btn-primary">Lưu thông tin</button>
+                <button type="button" class="btn btn-primary" id="addGVBtn">Lưu thông tin</button>
             </div>
           </form>
         </div>

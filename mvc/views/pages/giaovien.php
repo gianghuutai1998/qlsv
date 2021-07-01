@@ -74,7 +74,7 @@ $data_show = json_decode($data["giaovien"], true);
                  <?php echo $value["QueQuan"]?>
                  </td>
                  <td class="text-primary">
-                   <a href="javascript:;" class="btn btn-primary btn-round">Xóa</a>
+                   <a href="javascript:;" class="btn btn-primary btn-round deleteGVBtn" data-id="<?php echo $value["MaGV"]?>">Xóa</a>
                  </td>
                </tr>
 
@@ -94,3 +94,5 @@ $data_show = json_decode($data["giaovien"], true);
 
 
 <script src="./mvc/public/assets/js/funcpages_js/updateGV.js"></script>
+<script src="./mvc/public/assets/js/funcpages_js/deleteGV.js"></script>
+<script src="./mvc/public/assets/js/funcpages_js/addGV.js"></script>

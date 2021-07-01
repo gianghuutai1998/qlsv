@@ -12,7 +12,7 @@
           <form action="" method="POST" id="updateGVForm">
             <div class="form-group">
               <label for="MaGV">Mã giáo viên</label>
-              <input type="text" class="form-control" id="updateMaGV">
+              <input type="text" class="form-control" id="updateMaGV" disabled>
             </div>
             <div class="form-group">
               <label for="TenGV">Tên giáo viên</label>
@@ -28,13 +28,13 @@
               </style>
              
               <div class="form-check-new">
-                <input class="form-check-input" type="radio" name="GioiTinh" id="updateNam">
+                <input class="form-check-input" type="radio" name="GioiTinh" id="updateNam" disabled>
                 <label class="form-check-label" for="Nam">
                   Nam
                 </label>
               </div>
               <div class="form-check-new">
-                <input class="form-check-input" type="radio" name="GioiTinh" id="updateNu">
+                <input class="form-check-input" type="radio" name="GioiTinh" id="updateNu" disabled>
                 <label class="form-check-label" for="Nu">
                   Nữ
                 </label>
@@ -48,7 +48,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-              <button type="button" class="btn btn-primary" id="updateGVBtn">Lưu thay đổi</button>
+              <button type="button" class="btn btn-primary" id="updateGVBtn" data-dismiss="modal">Lưu thay đổi</button>
           </div>
           </form>
         </div>
