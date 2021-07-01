@@ -8,6 +8,7 @@ class DiemThi extends Controller{
         $this->view("master_1", [
             "page"=>"diemthi",
             "diemthi"=>$data,
+            "func_page"=>["adddiemthi"]
         ]);
     }
 }

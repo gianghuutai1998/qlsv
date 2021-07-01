@@ -7,7 +7,8 @@ class SinhVien extends Controller{
 
         $this->view("master_1", [
             "page"=>"sinhvien",
-            "sinhvien"=>$data
+            "sinhvien"=>$data,
+            "func_page"=>["addsinhvien"]
         ]);
     }
 }
