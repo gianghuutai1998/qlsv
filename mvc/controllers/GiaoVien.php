@@ -24,8 +24,11 @@ class GiaoVien extends Controller
         echo $data;
       
     }
-    public function add(){
-        print_r($_POST);
+    public function Add($id, $name, $gen, $home){
+        $giaovien = $this->model("GiaoVienModel");
+        $kq = $giaovien->addGiaoVien($id, $name, $gen, $home);
+        
+        echo $kq;
     }
     public function Update($id, $name, $home){
         $giaovien = $this->model("GiaoVienModel");
@@ -33,6 +36,11 @@ class GiaoVien extends Controller
         $new = $giaovien->getGiaoVienWithMaGV($id);
         echo $new;
         
+    }
+    public function Delete($MaGV){
+        $giaovien = $this->model("GiaoVienModel");
+        $kq = $giaovien->delGiaoVien($MaGV);
+        echo $kq;
     }
 }
 ?>
