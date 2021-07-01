@@ -8,7 +8,7 @@ window.onload= function(){
         Array.prototype.slice.call(document.getElementsByClassName(element.id)).forEach(element => {
             info[element.getAttribute("data-id")] = element;
         }); 
-        console.log(info);
+        // console.log(info);
         document.getElementById("updateTenGV").value = info["TenGV"].innerHTML.trim();
         document.getElementById("updateMaGV").value  = info["MaGV"].innerHTML.trim();
         document.getElementById("updateQuequan").value = info["QueQuan"].innerHTML.trim();

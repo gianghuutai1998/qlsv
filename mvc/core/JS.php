@@ -43,3 +43,4 @@
   <script src="/mvc/public/assets/js/idk.js">
     
   </script>
+  <script src="/mvc/public/assets/js/core/sidebar_eff.js"></script>
