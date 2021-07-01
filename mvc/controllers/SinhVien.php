@@ -51,7 +51,6 @@ class SinhVien extends Controller{
         $sinhvien->DeleteSinhVien($masv);
         header('location: /SinhVien');
     }
-        ]);
-    }
+        
 }
 ?>
