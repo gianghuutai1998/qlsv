@@ -39,7 +39,7 @@ class Lop extends Controller{
 
     public function Delete($malop = []){
         $lop = $this->model("LopModel");
-        $lop->DeleteMH($malop);
+        $lop->DeleteLop($malop);
         header('location: /Lop');
     }    
 }
