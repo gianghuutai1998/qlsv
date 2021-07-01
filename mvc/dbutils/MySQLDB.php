@@ -2,7 +2,7 @@
 class MySQLDB{
     private $host = 'localhost';
     private $username = 'root';
-    private $password = '123456';
+    private $password = '';
     private $dbname = 'QLSV';
     protected $conn;
     public function  __construct()
